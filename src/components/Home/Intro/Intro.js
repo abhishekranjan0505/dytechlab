@@ -1,15 +1,16 @@
-import React from "react";
-import classes from "./Intro.module.css";
-import img from "../../../assets/homeImage.jpg";
+import React from 'react';
+import classes from './Intro.module.css';
+import { p_color } from '../../../constants';
 
-const intro = () => {
+const Intro = () => {
   return (
     <div className={classes.CardMedia}>
-      <img src={img} alt=" " />
+      <video className={classes.video} width='100%' height='100%' autoPlay muted loop>
+        <source src='/videos/home.mp4' type='video/mp4' />
+      </video>
       <h1 className={classes.CardTitle}>
-        Where <span style={{ color: "#24a3d8" }}>experience</span>{" "}
-        <span>meets</span> innovation
-        <p style={{ fontSize: "16px", fontWeight: 400 }}>
+        Where <span style={{ color: p_color }}>experience</span> <span>meets</span> innovation
+        <p style={{ fontSize: '16px', fontWeight: 400 }}>
           A results-driven team at the intersection of trading + technology
         </p>
       </h1>
@@ -17,4 +18,4 @@ const intro = () => {
   );
 };
 
-export default intro;
+export default Intro;
